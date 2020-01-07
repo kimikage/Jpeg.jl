@@ -1,2 +1,2 @@
-# Jpeg.jl
+# LowLevelJPEG
 a library for low-level manipulation of JPEG images
