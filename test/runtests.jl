@@ -1,8 +1,10 @@
 using Test, LowLevelJPEG
 
+using Colors
+using FixedPointNumbers
 using StaticArrays
 
-ambiguities_lljpeg = detect_ambiguities(LowLevelJPEG, Base, Core)
+ambiguities_lljpeg = detect_ambiguities(LowLevelJPEG, Base, Core, Colors)
 ambiguities_sarray = detect_ambiguities(StaticArrays, Base, Core)
 
 @test isempty(setdiff(ambiguities_lljpeg, ambiguities_sarray))
@@ -36,6 +38,9 @@ function written_hex(obj)
     bytes2hex(take!(io))
 end
 
+@testset "Colors" begin
+    include("colors.jl")
+end
 @testset "Markers" begin
     include("markers.jl")
 end
