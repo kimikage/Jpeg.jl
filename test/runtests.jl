@@ -35,3 +35,7 @@ function written_hex(obj)
     write(io, obj)
     bytes2hex(take!(io))
 end
+
+@testset "Markers" begin
+    include("markers.jl")
+end
