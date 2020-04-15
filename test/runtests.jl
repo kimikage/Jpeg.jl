@@ -44,3 +44,9 @@ end
 @testset "Markers" begin
     include("markers.jl")
 end
+@testset "Blocks" begin
+    include("blocks.jl")
+end
+@testset "QTs" begin
+    include("qt.jl")
+end
