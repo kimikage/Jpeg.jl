@@ -56,3 +56,6 @@ end
 @testset "QTs" begin
     include("qt.jl")
 end
+@testset "Huffman" begin
+    include("huffman.jl")
+end

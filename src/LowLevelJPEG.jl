@@ -12,7 +12,11 @@ export JPEGGray, JPEGGray8, JPEGGray16, JPEGYCbCr, JPEGYCbCr8, JPEGYCbCr16,
        DCSymbol, ACSymbol, DCTCoeff, DCCoeff, ACCoeff,
        DCTBlock,
        QuantizationTable, QuantizationTable8, QuantizationTable16,
-       quantize, dequantize
+       quantize, dequantize,
+       HuffmanTreeNode, HuffmanBranchNode,
+       HuffmanSymbolNode, DCSymbolNode, ACSymbolNode,
+       HuffmanTree, DCHuffmanTree, ACHuffmanTree,
+       HuffmanTable, DCHuffmanTable, ACHuffmanTable
 
 u8(io::IO) = read(io, UInt8)
 u16(io::IO) = ntoh(read(io, UInt16))
@@ -26,5 +30,6 @@ include("codebits.jl")
 include("coeffs.jl")
 include("blocks.jl")
 include("qt.jl")
+include("huffman.jl")
 
 end # module
