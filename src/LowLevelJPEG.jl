@@ -8,6 +8,7 @@ using StaticArrays
 import Base: ==
 export JPEGGray, JPEGGray8, JPEGGray16, JPEGYCbCr, JPEGYCbCr8, JPEGYCbCr16,
        Marker, Markers,
+       CodeBits,
        DCTBlock,
        QuantizationTable, QuantizationTable8, QuantizationTable16,
        quantize, dequantize
@@ -20,6 +21,7 @@ hex(x::Unsigned, pad=2length(x)) = string(x, base=16, pad=pad)
 
 include("colors.jl")
 include("markers.jl")
+include("codebits.jl")
 include("blocks.jl")
 include("qt.jl")
 
