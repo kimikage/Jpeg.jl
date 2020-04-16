@@ -47,6 +47,9 @@ end
 @testset "CodeBits" begin
     include("codebits.jl")
 end
+@testset "Coeffs" begin
+    include("coeffs.jl")
+end
 @testset "Blocks" begin
     include("blocks.jl")
 end
